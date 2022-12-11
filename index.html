@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="nav">
+    <button class="nav__btn" data-type="reds">reds</button>
+    <button class="nav__btn" data-type="whites">whites</button>
+    <button class="nav__btn" data-type="sparkling">sparkling</button>
+    <button class="nav__btn" data-type="rose">rose</button>
+    <button class="nav__btn" data-type="dessert">dessert</button>
+    <button class="nav__btn" data-type="port">port</button>
+  </div>
+  
+  <div class="search">
+    <input type="search" name="search" id="search" placeholder="search by wine name">
+  </div>
+
+  <div class="toggle-form">Add to catalog</div>
+  
+  <div class="add-form">
+    <div class="line first-line">
+      <input type="text" name="addtitle" id="addtitle" placeholder="wine title: ">
+      <input type="url" name="addimage" id="addimage" placeholder="url for img: ">
+    </div>
+    <div class="line second-line">
+      <input type="text" name="addwinery" id="addwinery" placeholder="winery: ">
+      <input type="text" name="addlocation" id="addlocation" placeholder="location: ">
+    </div>
+    <div class="line last-line">
+      <input type="text" name="addaverage" id="addaverage" placeholder="average: ">
+      <input type="text" name="addreviews" id="addreviews" placeholder="reviews: ">
+      <select name="" id="">
+        <option value="null" disabled selected>Choose category</option>
+        <option value="reds">reds</option>
+        <option value="whites">whites</option>
+        <option value="sparkling">sparkling</option>
+        <option value="rose">rose</option>
+        <option value="dessert">dessert</option>
+        <option value="port">port</option>
+      </select>
+    </div>
+    <button class="add__btn">Submit</button>    
+  </div>
+
+  <div class="wrapper">   
+  </div>
+
+  <!-- <div class="card-actions">
+    <button id="load-more">Load more</button>
+    <span>Showing 
+      <span id="card-count"></span> of 
+      <span id="card-total"></span> cards      
+    </span>
+  </div> -->
+
+  <div class="modal">
+    <div class="modal__wrapper">
+      <span class="modal__close">
+        <svg width="20" height="20" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.70711 0.29289C1.31659 -0.09763 0.683417 -0.09763 0.292897 0.29289C-0.0976325 0.68341 -0.0976325 1.31658 0.292897 1.7071L6.06765 7.48183L0.292958 13.2565C-0.0975724 13.647 -0.0975724 14.2802 0.292958 14.6707C0.683478 15.0612 1.31665 15.0612 1.70717 14.6707L7.48185 8.89603L13.2565 14.6707C13.647 15.0612 14.2802 15.0612 14.6707 14.6707C15.0612 14.2802 15.0612 13.647 14.6707 13.2565L8.89605 7.48183L14.6707 1.7071C15.0613 1.31658 15.0613 0.68341 14.6707 0.29289C14.2802 -0.09763 13.6471 -0.09763 13.2565 0.29289L7.48185 6.06763L1.70711 0.29289Z" />
+          </svg>          
+      </span>
+      <div class="edit-form">
+        <h2>Card changes</h2>
+        <div class="line first-line">
+          <input type="text" name="title" id="title" placeholder="wine title: ">
+          <input type="url" name="image" id="image" placeholder="url for img: ">
+        </div>
+        <div class="line second-line">
+          <input type="text" name="winery" id="winery" placeholder="winery: ">
+          <input type="text" name="location" id="location" placeholder="location: ">
+        </div>
+        <div class="line last-line">
+          <input type="text" name="average" id="average" placeholder="average: ">
+          <input type="text" name="reviews" id="reviews" placeholder="reviews: "> 
+        </div>
+        <button class="edit__btn">Submit</button>    
+      </div>
+    </div>
+    </div>
+    
+
+  
+</body>
+<script src="js/index.js"></script>
+</html>

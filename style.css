@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.nav .nav__btn {
+  height: 40px;
+  width: 120px;
+  border: 1px transparent;
+}
+
+.nav .nav__btn:hover {
+  background: rgba(51, 53, 58, 0.75);
+  cursor: pointer;
+  color: white;
+}
+
+.nav .nav__btn:focus {
+  border-bottom: 2px solid #bca480;
+}
+
+.search{
+  display: none;
+}
+
+.search, .edit-form, .add-form {
+  /* max-width: 1280px; */
+  text-align: center;
+  margin-top: 50px;
+}
+
+.search input, .edit-form input, .add-form input {
+  height: 40px;
+  width: 400px;
+  padding: 0 20px;
+}
+
+
+.toggle-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  border: 1px solid rgba(51, 53, 58, 0.75);
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.toggle-form:hover {
+  background: rgba(51, 53, 58, 0.75);
+  color: white;
+  cursor: pointer;
+}
+
+.add-form {
+  position: relative;
+}
+
+.add-form .last-line input {
+  width: 350px;
+}
+
+.edit-form, .add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-form .line, .add-form .line {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.edit-form .edit__btn, .add-form .add__btn {
+  height: 40px;
+  width: 120px;
+  margin: 0 auto;
+  border: none;
+}
+
+.edit-form .edit__btn:hover, .add-form .add__btn:hover{
+  cursor: pointer;
+  background: rgba(51, 53, 58, 0.75);
+  color: white;
+}
+
+.add-form {
+  display: none;
+  margin: 50px auto 0;
+}
+
+
+.wrapper {
+  display: grid;
+  justify-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 50px auto;
+  padding: 0 40px;
+  max-width: 1280px;
+}
+
+.wrapper .card__item {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px 60px;
+  border-bottom: 2px solid #ebebec;
+  background: white;
+  overflow: hidden;
+  transition: .4s linear;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.wrapper .card__item:hover{
+  border-color: #bca480;
+}
+
+.wrapper .card__item .wine {
+  display: grid;
+  grid-template-rows: 50px;
+}
+
+.wrapper .card__item .descr {
+  text-align: initial;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+.wrapper .card__item .descr .info{
+  margin-top: 10px;
+}
+
+.wrapper .card__item .label {
+  font-size: 12px;
+  color: #7d7d7e;
+}
+
+.wrapper .card__item .rating .average, .wrapper .card__item .rating .reviews {
+  display: block;
+}
+
+.wrapper .card__item img {
+  height: 300px;
+  object-fit: contain;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.wrapper .card__item .actions {
+  position: absolute;
+  left: 0;
+  bottom: -20%;
+  width: 100%;
+  background: rgba(51, 53, 58, 0.75);
+  transition: .3s linear;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.wrapper .card__item .actions button {
+  height: 60px;
+  border: 1px transparent;
+  font-size: 16px;
+}
+
+.wrapper .card__item .actions button:hover {
+  background: rgba(59, 62, 67, 0.85);
+  color: white;
+  cursor: pointer;
+}
+
+.card__item:hover .actions {
+  bottom: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(34, 60, 80, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal__wrapper {
+  width: max-content;
+  height: max-content;
+  background-color: white;
+  display: flex;
+  margin: 50px auto 0;
+  padding: 40px;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.modal__close svg:hover {
+  cursor: pointer;
+  fill: #7d7d7e;
+}
+
+.card-actions {
+  width: 380px;
+  margin: 8px auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#load-more {
+  width: 160px;
+  padding: 16px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+ 
+#load-more:not([disabled]):hover {
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+}
+ 
+#load-more[disabled] {
+  background-color: #eaeaea !important;
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.show {
+  display: flex;
+}
